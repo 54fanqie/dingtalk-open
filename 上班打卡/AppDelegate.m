@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
+#import <CoreLocation/CoreLocation.h>
+@interface AppDelegate ()<CLLocationManagerDelegate>
+@property (nonatomic, assign) UIBackgroundTaskIdentifier bgTask;
+@property (nonatomic,strong) CLLocationManager * locationManager;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate =self;
     return YES;
 }
 
@@ -30,6 +33,30 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [ self comeToBackgroundMode];
+    [_locationManager startUpdatingLocation];
+}
+-(void)comeToBackgroundMode{
+    //初始化一个后台任务BackgroundTask，这个后台任务的作用就是告诉系统当前app在后台有任务处理，需要时间
+    UIApplication*  app = [UIApplication sharedApplication];
+    self.bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        [app endBackgroundTask:self.bgTask];
+        self.bgTask = UIBackgroundTaskInvalid;
+    }];
+    //开启定时器 不断向系统请求后台任务执行的时间
+    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:25.0 target:self selector:@selector(applyForMoreTime) userInfo:nil repeats:YES];
+    [timer fire];
+}
+
+-(void)applyForMoreTime {
+    //如果系统给的剩余时间小于60秒 就终止当前的后台任务，再重新初始化一个后台任务，重新让系统分配时间，这样一直循环下去，保持APP在后台一直处于active状态。
+    if ([UIApplication sharedApplication].backgroundTimeRemaining < 60) {
+        [[UIApplication sharedApplication] endBackgroundTask:self.bgTask];
+        self.bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+            [[UIApplication sharedApplication] endBackgroundTask:self.bgTask];
+            self.bgTask = UIBackgroundTaskInvalid;
+        }];
+    }
 }
 
 

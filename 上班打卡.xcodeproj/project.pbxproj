@@ -13,6 +13,7 @@
 		B1070CD220187BB7007423F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1070CD120187BB7007423F1 /* Assets.xcassets */; };
 		B1070CD520187BB7007423F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */; };
 		B1070CD820187BB7007423F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1070CD720187BB7007423F1 /* main.m */; };
+		B1EEF0D82213C67C00313390 /* TimeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEF0D72213C67C00313390 /* TimeDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		B1070CD420187BB7007423F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1070CD620187BB7007423F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1070CD720187BB7007423F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1EEF0D62213C67C00313390 /* TimeDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeDetailView.h; sourceTree = "<group>"; };
+		B1EEF0D72213C67C00313390 /* TimeDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				B1070CC920187BB7007423F1 /* AppDelegate.m */,
 				B1070CCB20187BB7007423F1 /* ViewController.h */,
 				B1070CCC20187BB7007423F1 /* ViewController.m */,
+				B1EEF0D62213C67C00313390 /* TimeDetailView.h */,
+				B1EEF0D72213C67C00313390 /* TimeDetailView.m */,
 				B1070CCE20187BB7007423F1 /* Main.storyboard */,
 				B1070CD120187BB7007423F1 /* Assets.xcassets */,
 				B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EEF0D82213C67C00313390 /* TimeDetailView.m in Sources */,
 				B1070CCD20187BB7007423F1 /* ViewController.m in Sources */,
 				B1070CD820187BB7007423F1 /* main.m in Sources */,
 				B1070CCA20187BB7007423F1 /* AppDelegate.m in Sources */,
@@ -279,9 +285,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76GL5S73EE;
 				INFOPLIST_FILE = "上班打卡/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bw.daka.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,9 +300,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76GL5S73EE;
 				INFOPLIST_FILE = "上班打卡/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bw.daka.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
