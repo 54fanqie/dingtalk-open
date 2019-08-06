@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TimeDetailView.h"
+#import "LocationTransform.h"
 
 @interface ViewController ()
 // 这里变为了weak
@@ -25,8 +26,8 @@ static NSString * const WorkTime = @"09:00";
 
 
 //结束打卡时间
-static NSString * const EndDingTime = @"18";
-static NSString * const WorkTimeEnd = @"19:00";
+static NSString *  EndDingTime = @"18";
+static NSString *  WorkTimeEnd = @"19:00";
 
 @implementation ViewController
 
@@ -36,7 +37,33 @@ static NSString * const WorkTimeEnd = @"19:00";
     _timeDetailView = [[TimeDetailView alloc]init];
     _timeDetailView.currentTimeLab.text = self.getCurrentTime;
     
+    LocationTransform * beforeLocation = [[LocationTransform alloc] initWithLatitude:116.245571 andLongitude:40.076428];
+    //百度转化为GPS
+    LocationTransform *afterLocation = [beforeLocation transformFromBDToGPS];
+    NSLog(@"转化后:%f, %f", afterLocation.latitude, afterLocation.longitude);
+//    <wpt lat="40.075199" lon="116.239505">
 }
+
+/**
+ 手动设置下班时间
+
+ @param sender nil
+ */
+- (IBAction)settingAction:(id)sender {
+    UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"您已修改下班打开时间" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * alt1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        EndDingTime = @"20";
+        WorkTimeEnd = @"21:00";
+    }];
+    [alertVC addAction:alt1];
+    [self presentViewController:alertVC animated:YES completion:nil];
+}
+
+/**
+ 开启上班打卡
+
+ @param sender nil
+ */
 - (IBAction)startWorkAction:(id)sender {
     self.setTime = [self getTheRandomTime:@"AM"];
     self.endTime = WorkTime;
@@ -45,6 +72,12 @@ static NSString * const WorkTimeEnd = @"19:00";
     [self startTimer];
     [_timeDetailView showWithAnimation:YES];
 }
+
+/**
+ 开启下班打卡
+
+ @param sender nil
+ */
 - (IBAction)endWorkAction:(id)sender {
     self.setTime = [self getTheRandomTime:@"PM"];
     self.endTime = WorkTimeEnd;
@@ -93,18 +126,18 @@ static NSString * const WorkTimeEnd = @"19:00";
     if ([dayOptions isEqualToString:@"AM"]) {
         dingTimeStr = [NSString stringWithFormat:@"%@:%d",StartDingTime,minute];
     }else{
-        dingTimeStr = [NSString stringWithFormat:@"%@:%d",EndDingTime,10];
+        dingTimeStr = [NSString stringWithFormat:@"%@:%d",EndDingTime,minute];
     }
     return dingTimeStr;
 }
 
 
 /**
- 获取分针的随机数： 30 ~ 60范围
+ 获取分针的随机数： 40 ~ 60范围
  @return 分针时刻随机数
  */
 -(int)getTheArc4random{
-    int y = 25 +  (arc4random() % 30);
+    int y = 40 +  (arc4random() % 20);
     return y;
 }
 
