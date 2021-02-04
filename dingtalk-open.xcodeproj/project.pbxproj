@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1070CC520187BB7007423F1 /* 上班打卡.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "上班打卡.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1070CC520187BB7007423F1 /* dingtalk-open.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dingtalk-open.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1070CC820187BB7007423F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1070CC920187BB7007423F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1070CCB20187BB7007423F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -30,6 +30,7 @@
 		B1070CD720187BB7007423F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B186F25722F7DEE00075F416 /* LocationTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTransform.h; sourceTree = "<group>"; };
 		B186F25822F7DEE00075F416 /* LocationTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTransform.m; sourceTree = "<group>"; };
+		B1C8F03C22F90F1E00FF7172 /* Location2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location2.gpx; sourceTree = "<group>"; };
 		B1EEF0D62213C67C00313390 /* TimeDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeDetailView.h; sourceTree = "<group>"; };
 		B1EEF0D72213C67C00313390 /* TimeDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +49,7 @@
 		B1070CBC20187BB7007423F1 = {
 			isa = PBXGroup;
 			children = (
-				B1070CC720187BB7007423F1 /* 上班打卡 */,
+				B1070CC720187BB7007423F1 /* dingtalk-open */,
 				B1070CC620187BB7007423F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +57,12 @@
 		B1070CC620187BB7007423F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1070CC520187BB7007423F1 /* 上班打卡.app */,
+				B1070CC520187BB7007423F1 /* dingtalk-open.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B1070CC720187BB7007423F1 /* 上班打卡 */ = {
+		B1070CC720187BB7007423F1 /* dingtalk-open */ = {
 			isa = PBXGroup;
 			children = (
 				B1070CC820187BB7007423F1 /* AppDelegate.h */,
@@ -77,16 +78,17 @@
 				B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */,
 				B1070CD620187BB7007423F1 /* Info.plist */,
 				B1070CD720187BB7007423F1 /* main.m */,
+				B1C8F03C22F90F1E00FF7172 /* Location2.gpx */,
 			);
-			path = "上班打卡";
+			path = "dingtalk-open";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1070CC420187BB7007423F1 /* 上班打卡 */ = {
+		B1070CC420187BB7007423F1 /* dingtalk-open */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1070CDB20187BB7007423F1 /* Build configuration list for PBXNativeTarget "上班打卡" */;
+			buildConfigurationList = B1070CDB20187BB7007423F1 /* Build configuration list for PBXNativeTarget "dingtalk-open" */;
 			buildPhases = (
 				B1070CC120187BB7007423F1 /* Sources */,
 				B1070CC220187BB7007423F1 /* Frameworks */,
@@ -96,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = "上班打卡";
-			productName = "上班打卡";
-			productReference = B1070CC520187BB7007423F1 /* 上班打卡.app */;
+			name = "dingtalk-open";
+			productName = "dingtalk-open";
+			productReference = B1070CC520187BB7007423F1 /* dingtalk-open.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B1070CC020187BB7007423F1 /* Build configuration list for PBXProject "上班打卡" */;
+			buildConfigurationList = B1070CC020187BB7007423F1 /* Build configuration list for PBXProject "dingtalk-open" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1070CC420187BB7007423F1 /* 上班打卡 */,
+				B1070CC420187BB7007423F1 /* dingtalk-open */,
 			);
 		};
 /* End PBXProject section */
@@ -289,10 +291,9 @@
 		B1070CDC20187BB7007423F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76GL5S73EE;
-				INFOPLIST_FILE = "上班打卡/Info.plist";
+				DEVELOPMENT_TEAM = YN79T3UVP2;
+				INFOPLIST_FILE = "dingtalk-open/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
@@ -304,10 +305,9 @@
 		B1070CDD20187BB7007423F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76GL5S73EE;
-				INFOPLIST_FILE = "上班打卡/Info.plist";
+				DEVELOPMENT_TEAM = YN79T3UVP2;
+				INFOPLIST_FILE = "dingtalk-open/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
@@ -319,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1070CC020187BB7007423F1 /* Build configuration list for PBXProject "上班打卡" */ = {
+		B1070CC020187BB7007423F1 /* Build configuration list for PBXProject "dingtalk-open" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1070CD920187BB7007423F1 /* Debug */,
@@ -328,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1070CDB20187BB7007423F1 /* Build configuration list for PBXNativeTarget "上班打卡" */ = {
+		B1070CDB20187BB7007423F1 /* Build configuration list for PBXNativeTarget "dingtalk-open" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1070CDC20187BB7007423F1 /* Debug */,

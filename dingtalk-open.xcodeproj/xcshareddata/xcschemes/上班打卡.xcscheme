@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1070CC420187BB7007423F1"
-               BuildableName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;.app"
-               BlueprintName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;"
-               ReferencedContainer = "container:&#x4e0a;&#x73ed;&#x6253;&#x5361;.xcodeproj">
+               BuildableName = "dingtalk-open.app"
+               BlueprintName = "dingtalk-open"
+               ReferencedContainer = "container:dingtalk-open.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1070CC420187BB7007423F1"
-            BuildableName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;.app"
-            BlueprintName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;"
-            ReferencedContainer = "container:&#x4e0a;&#x73ed;&#x6253;&#x5361;.xcodeproj">
+            BuildableName = "dingtalk-open.app"
+            BlueprintName = "dingtalk-open"
+            ReferencedContainer = "container:dingtalk-open.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +54,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1070CC420187BB7007423F1"
-            BuildableName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;.app"
-            BlueprintName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;"
-            ReferencedContainer = "container:&#x4e0a;&#x73ed;&#x6253;&#x5361;.xcodeproj">
+            BuildableName = "dingtalk-open.app"
+            BlueprintName = "dingtalk-open"
+            ReferencedContainer = "container:dingtalk-open.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
       <LocationScenarioReference
          identifier = "../../&#x4e0a;&#x73ed;&#x6253;&#x5361;/Location2.gpx"
          referenceType = "0">
@@ -79,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1070CC420187BB7007423F1"
-            BuildableName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;.app"
-            BlueprintName = "&#x4e0a;&#x73ed;&#x6253;&#x5361;"
-            ReferencedContainer = "container:&#x4e0a;&#x73ed;&#x6253;&#x5361;.xcodeproj">
+            BuildableName = "dingtalk-open.app"
+            BlueprintName = "dingtalk-open"
+            ReferencedContainer = "container:dingtalk-open.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
