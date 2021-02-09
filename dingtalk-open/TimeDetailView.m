@@ -59,7 +59,7 @@ static TimeDetailView *singleInstance;
         
         
         _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 240, 240)];
-        _contentView.backgroundColor = [UIColor colorWithRed:50/255.0 green:165/255.0 blue:255/255.0 alpha:1.0];
+        _contentView.backgroundColor = [UIColor colorWithRed:233/255.0 green:96/255.0 blue:78/255.0 alpha:1.0];
         _contentView.layer.cornerRadius = 120;
         _contentView.layer.masksToBounds = YES;
         [_contentView setCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height /2 )];
@@ -67,14 +67,15 @@ static TimeDetailView *singleInstance;
         
         
         
-        self.currentTimeLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, _contentView.frame.size.width, 30)];
+        self.currentTimeLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, _contentView.frame.size.width, 100)];
         self.currentTimeLab.textAlignment = NSTextAlignmentCenter;
         self.currentTimeLab.text = @"00:00:00";
-        self.currentTimeLab.font = [UIFont systemFontOfSize:20];
+        self.currentTimeLab.font = [UIFont systemFontOfSize:18];
         self.currentTimeLab.textColor = [UIColor whiteColor];
+        self.currentTimeLab.numberOfLines=0;
         [self.currentTimeLab setCenter:CGPointMake(_contentView.bounds.size.width / 2, _contentView.bounds.size.height /2 )];
         [_contentView addSubview:self.currentTimeLab];
-        
+    
         
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(self.currentTimeLab.frame)-30, _contentView.frame.size.width, 30)];
         label.textAlignment = NSTextAlignmentCenter;
@@ -101,6 +102,7 @@ static TimeDetailView *singleInstance;
 -(void)hideWithAnimation
 {
     [self hideWithAnimation:YES];
+    self.closeBlock();
 }
 
 - (void)showWithAnimation:(BOOL)animation

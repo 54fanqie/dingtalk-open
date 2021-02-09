@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UILabel * setTimeLab;
 @property(nonatomic,strong) UILabel * titlelabel;
 - (void)showWithAnimation:(BOOL)animation;
+@property(copy,nonatomic)void(^closeBlock)(void);//申明回调函数
 @end
 
 NS_ASSUME_NONNULL_END

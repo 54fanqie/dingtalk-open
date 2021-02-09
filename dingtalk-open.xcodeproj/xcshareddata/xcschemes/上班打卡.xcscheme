@@ -60,7 +60,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
-         identifier = "../../&#x4e0a;&#x73ed;&#x6253;&#x5361;/Location2.gpx"
+         identifier = "../../dingtalk-open/Location.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

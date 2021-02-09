@@ -14,8 +14,6 @@
 		B1070CD520187BB7007423F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */; };
 		B1070CD820187BB7007423F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1070CD720187BB7007423F1 /* main.m */; };
 		B186F25922F7DEE00075F416 /* LocationTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B186F25822F7DEE00075F416 /* LocationTransform.m */; };
-		B1A3616225CFC802005F0657 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A3615D25CFC802005F0657 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B1A3616325CFC802005F0657 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A3615F25CFC802005F0657 /* JSONKit.m */; };
 		B1A3616F25CFCAE1005F0657 /* HolidayMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A3616E25CFCAE1005F0657 /* HolidayMessage.m */; };
 		B1EEF0D82213C67C00313390 /* TimeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEF0D72213C67C00313390 /* TimeDetailView.m */; };
 /* End PBXBuildFile section */
@@ -33,13 +31,9 @@
 		B1070CD720187BB7007423F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B186F25722F7DEE00075F416 /* LocationTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTransform.h; sourceTree = "<group>"; };
 		B186F25822F7DEE00075F416 /* LocationTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTransform.m; sourceTree = "<group>"; };
-		B1A3615D25CFC802005F0657 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = JSONKit/JSONKit.m; sourceTree = "<group>"; };
-		B1A3615F25CFC802005F0657 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		B1A3616025CFC802005F0657 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		B1A3616125CFC802005F0657 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = JSONKit/JSONKit.h; sourceTree = "<group>"; };
 		B1A3616D25CFCAE1005F0657 /* HolidayMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolidayMessage.h; sourceTree = "<group>"; };
 		B1A3616E25CFCAE1005F0657 /* HolidayMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolidayMessage.m; sourceTree = "<group>"; };
-		B1C8F03C22F90F1E00FF7172 /* Location2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location2.gpx; sourceTree = "<group>"; };
+		B1C8F03C22F90F1E00FF7172 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		B1EEF0D62213C67C00313390 /* TimeDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeDetailView.h; sourceTree = "<group>"; };
 		B1EEF0D72213C67C00313390 /* TimeDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,9 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				B1A3616725CFCA87005F0657 /* Model */,
-				B1A3615E25CFC802005F0657 /* JSONKit */,
-				B1A3616125CFC802005F0657 /* JSONKit.h */,
-				B1A3615D25CFC802005F0657 /* JSONKit.m */,
 				B1070CC820187BB7007423F1 /* AppDelegate.h */,
 				B1070CC920187BB7007423F1 /* AppDelegate.m */,
 				B1070CCB20187BB7007423F1 /* ViewController.h */,
@@ -91,18 +82,9 @@
 				B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */,
 				B1070CD620187BB7007423F1 /* Info.plist */,
 				B1070CD720187BB7007423F1 /* main.m */,
-				B1C8F03C22F90F1E00FF7172 /* Location2.gpx */,
+				B1C8F03C22F90F1E00FF7172 /* Location.gpx */,
 			);
 			path = "dingtalk-open";
-			sourceTree = "<group>";
-		};
-		B1A3615E25CFC802005F0657 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				B1A3615F25CFC802005F0657 /* JSONKit.m */,
-				B1A3616025CFC802005F0657 /* JSONKit.h */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		B1A3616725CFCA87005F0657 /* Model */ = {
@@ -188,10 +170,8 @@
 				B1EEF0D82213C67C00313390 /* TimeDetailView.m in Sources */,
 				B1070CCD20187BB7007423F1 /* ViewController.m in Sources */,
 				B1A3616F25CFCAE1005F0657 /* HolidayMessage.m in Sources */,
-				B1A3616225CFC802005F0657 /* JSONKit.m in Sources */,
 				B1070CD820187BB7007423F1 /* main.m in Sources */,
 				B186F25922F7DEE00075F416 /* LocationTransform.m in Sources */,
-				B1A3616325CFC802005F0657 /* JSONKit.m in Sources */,
 				B1070CCA20187BB7007423F1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
