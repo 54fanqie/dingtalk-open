@@ -29,8 +29,8 @@ static NSString * const WorkTime = @"09:20";
 static NSString *  EndDingTime = @"18:30";
 static NSString *  WorkTimeEnd = @"20:00";
 
-static int count = 0;
 
+static int count = 0;
 @implementation ViewController
 
 - (void)viewDidLoad {
