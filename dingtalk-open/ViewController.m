@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "TimeDetailView.h"
-#import "LocationTransform.h"
 #import "EventKit/EventKit.h"
 #import "HolidayMessage.h"
 @interface ViewController ()
@@ -45,6 +44,7 @@ static int count = 0;
     if (ho!=nil) {
         self.dateLab.text =[NSString stringWithFormat: @"%hhu  %@",ho.holiday,ho.name];
     }
+//    116.271397,40.066593
 }
 
 
@@ -307,16 +307,4 @@ static int count = 0;
     [alertVC addAction:alt1];
     [self presentViewController:alertVC animated:YES completion:nil];
 }
-
-/**
-test 坐标转换也可直接使用高德坐标转换：https://lbs.amap.com/console/show/picker
- */
--(void)locationTransform{
-    LocationTransform * beforeLocation = [[LocationTransform alloc] initWithLatitude:116.245571 andLongitude:40.076428];
-    //百度转化为GPS
-    LocationTransform * afterLocation = [beforeLocation transformFromBDToGPS];
-    NSLog(@"转化后:%f, %f", afterLocation.latitude, afterLocation.longitude);
-    //    <wpt lat="40.075199" lon="116.239505">
-}
-
 @end

@@ -13,7 +13,6 @@
 		B1070CD220187BB7007423F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1070CD120187BB7007423F1 /* Assets.xcassets */; };
 		B1070CD520187BB7007423F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1070CD320187BB7007423F1 /* LaunchScreen.storyboard */; };
 		B1070CD820187BB7007423F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1070CD720187BB7007423F1 /* main.m */; };
-		B186F25922F7DEE00075F416 /* LocationTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B186F25822F7DEE00075F416 /* LocationTransform.m */; };
 		B1A3616F25CFCAE1005F0657 /* HolidayMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A3616E25CFCAE1005F0657 /* HolidayMessage.m */; };
 		B1EEF0D82213C67C00313390 /* TimeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEF0D72213C67C00313390 /* TimeDetailView.m */; };
 /* End PBXBuildFile section */
@@ -29,8 +28,6 @@
 		B1070CD420187BB7007423F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1070CD620187BB7007423F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1070CD720187BB7007423F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B186F25722F7DEE00075F416 /* LocationTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTransform.h; sourceTree = "<group>"; };
-		B186F25822F7DEE00075F416 /* LocationTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTransform.m; sourceTree = "<group>"; };
 		B1A3616D25CFCAE1005F0657 /* HolidayMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolidayMessage.h; sourceTree = "<group>"; };
 		B1A3616E25CFCAE1005F0657 /* HolidayMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolidayMessage.m; sourceTree = "<group>"; };
 		B1C8F03C22F90F1E00FF7172 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
@@ -73,8 +70,6 @@
 				B1070CC920187BB7007423F1 /* AppDelegate.m */,
 				B1070CCB20187BB7007423F1 /* ViewController.h */,
 				B1070CCC20187BB7007423F1 /* ViewController.m */,
-				B186F25722F7DEE00075F416 /* LocationTransform.h */,
-				B186F25822F7DEE00075F416 /* LocationTransform.m */,
 				B1EEF0D62213C67C00313390 /* TimeDetailView.h */,
 				B1EEF0D72213C67C00313390 /* TimeDetailView.m */,
 				B1070CCE20187BB7007423F1 /* Main.storyboard */,
@@ -171,7 +166,6 @@
 				B1070CCD20187BB7007423F1 /* ViewController.m in Sources */,
 				B1A3616F25CFCAE1005F0657 /* HolidayMessage.m in Sources */,
 				B1070CD820187BB7007423F1 /* main.m in Sources */,
-				B186F25922F7DEE00075F416 /* LocationTransform.m in Sources */,
 				B1070CCA20187BB7007423F1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,13 +299,15 @@
 		B1070CDC20187BB7007423F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YN79T3UVP2;
 				INFOPLIST_FILE = "dingtalk-open/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gomain.daka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -319,13 +315,15 @@
 		B1070CDD20187BB7007423F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YN79T3UVP2;
 				INFOPLIST_FILE = "dingtalk-open/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bw.daka;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gomain.daka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
